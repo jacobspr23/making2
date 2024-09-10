@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Making 2</title>
+    <link rel="stylesheet" type="text/css" href="making2.css">
+</head>
+<body>
+    <input type="color" id="colorPicker">
+  
+  <script>
+    document.getElementById('colorPicker').addEventListener('input', function() {
+      document.body.style.backgroundColor = this.value;
+    });
+  </script>
+    <!-- <div id="shape"></div> -->
+    <input type="range" id="sizeSlider" min="50" max="300" value="100">
+    <a href="index.html" ><img src="back-button-icon.png" id="backButton"></a>
+    
+    <script>
+      document.getElementById('sizeSlider').addEventListener('input', function() {
+        const newSize = this.value + 'px';
+        // document.getElementById('shape').style.width = newSize;
+        // document.getElementById('shape').style.height = newSize;
+        document.getElementById('colorPicker').style.width = newSize;
+        document.getElementById('colorPicker').style.height = newSize;
+        document.getElementById('backButton').style.width = newSize;
+        document.getElementById('backButton').style.height = newSize;
+      });
+    </script>
+    
+</body>
+</html>
